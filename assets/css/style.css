@@ -1,0 +1,390 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* General styles */
+body {
+    font-family: 'Raleway', Arial, sans-serif; /* Apply Raleway font */
+    background: url(https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?fm=jpg&w=3000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8aW50ZXJpb3IlMjBkZXNpZ258ZW58MHx8MHx8fDA%3D) no-repeat center center/cover; 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 1000px;
+    background-color: #fff; /* Fallback color if the image doesn't load */
+    overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+.navbar {
+    background-color: transparent;
+}
+
+.navbar-nav .nav-link {
+    color: white;
+    font-weight: bold;
+    font-family: 'Raleway', Arial, sans-serif; /* Apply Raleway font */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #a89577;
+}
+
+.navbar-brand {
+    color: white;
+    font-family: 'Raleway', Arial, sans-serif; /* Apply Raleway font */
+}
+
+.hero-section {
+    height: 100vh; /* Cover the full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-images img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.hero-images img.active {
+    opacity: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0); /* Adjust opacity if needed */
+    /* Change rgba to transparent or adjust opacity */
+}
+
+.hero-content {
+    position: relative; /* Ensure the positioning context is set */
+    z-index: 1; /* Ensure it's above other content */
+    color: #fff; /* Default text color */
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    color: #fff; /* Explicitly set text color to white */
+    font-family: 'Raleway', Arial, sans-serif; /* Apply Raleway font */
+    margin: 0; /* Ensure there's no additional margin */
+    padding: 0; /* Ensure there's no additional padding */
+}
+
+.hero-content p {
+    font-size: 2.5rem; /* Adjust the size to match the current h1 size */
+    color: #fff; /* Explicitly set text color to white */
+    font-family: 'Raleway', Arial, sans-serif; /* Apply Raleway font */
+    margin: 0; /* Ensure there's no additional margin */
+    padding: 0; /* Ensure there's no additional padding */
+}
+
+.services-section {
+    background: #333;
+    color: white;
+    padding: 50px 0;
+}
+
+.services-section h3 {
+    margin-bottom: 20px;
+    text-align: center; /* Center align the heading */
+    font-family: 'Raleway', Arial, sans-serif; /* Apply Raleway font */
+}
+
+.services-section ul {
+    list-style: disc;
+    padding-left: 20px;
+    text-align: center; /* Center align the list items */
+    font-family: 'Raleway', Arial, sans-serif; /* Apply Raleway font */
+}
+
+.services-section ul li {
+    margin: 10px 0;
+}
+
+.btn-custom {
+    background-color: #a89577;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-family: 'Raleway', Arial, sans-serif; /* Apply Raleway font */
+    display: block; /* Ensure button is displayed as a block element */
+    margin: 20px auto 0; /* Center the button horizontally and add space above */
+}
+
+.btn-custom:hover {
+    background-color: #8c7d5a;
+}
+
+.border1 {
+    border: 1px solid #a89577;
+}
+
+.border1-top {
+    border-top: 1px solid #a89577;
+}
+
+.full-left {
+    display: block;
+    margin-left: 0;
+    margin-right: auto;
+}
+
+.box {
+    color: white;
+    border: 1px solid #a89577;
+    padding: 20px 25px; /* Adjust the padding as necessary */
+    flex: 1; /* Ensures the boxes grow equally */
+    text-align: center; /* Centers the text and images */
+    margin: 0 10px; /* Adjusts spacing between the boxes */
+}
+
+.box img {
+    display: block;
+    margin: 0 auto;
+    width: 50px;
+    height: 50px;
+}
+
+@media (max-width: 768px) {
+    .container1 {
+        flex-direction: column;
+        align-items: center;
+        padding-left: 0;
+    }
+
+    .box {
+        margin-bottom: 20px;
+        border: 1px solid #a89577;
+    }
+
+    .home1 {
+        margin-right: -10px;
+    }
+
+
+
+    .hero-section {
+        background: url("/p2.jpg") top center;
+        background-attachment: fixed;
+        background-position: top right; 
+        background-size: 82%; 
+        background-repeat: no-repeat;
+    }
+
+
+    .hero-content h1, .hero-content p {
+        font-size: 1.5rem; 
+    }
+}
+
+.img-fluid {
+    transition: transform 0.3s ease;
+}
+
+.img-fluid:hover {
+    transform: scale(1.05);
+}
+
+.feedback-section {
+    background-color: #333;
+    padding: 50px 0;
+}
+
+.title-box {
+    background-color: #444;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    color: #fff;
+    border: 2px solid #a89577;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.feedback-box {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border: 2px solid #a89577;
+    color: #fff;
+    height: 300px; /* Set a fixed height for uniformity */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Space between content to fit evenly */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feedback-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.feedback-box p {
+    font-size: 1em;
+    color: #ccc;
+    margin-bottom: 10px;
+    overflow-y: auto; /* Allow scrolling if content is too long */
+}
+
+.feedback-box h5 {
+    font-size: 1.1em;
+    color: #fff;
+    font-weight: bold;
+    margin: 0;
+}
+/* Contact Section */
+.contact-section {
+    background-color: #333;
+    color: #fff;
+    padding: 60px 0;
+}
+
+.contact-section h2 {
+    color: #a89577;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    font-family: 'Raleway', Arial, sans-serif; /* Apply Raleway font */
+}
+
+.contact-section .contact-info {
+    margin-bottom: 30px;
+}
+
+.contact-section .contact-info p {
+    margin-bottom: 15px;
+    font-family: 'Raleway', Arial, sans-serif; /* Apply Raleway font */
+}
+
+.contact-section .contact-info strong {
+    color: #a89577;
+    font-family: 'Raleway', Arial, sans-serif; /* Apply Raleway font */
+}
+
+.contact-section .form-group {
+    margin-bottom: 20px;
+}
+
+.contact-section label {
+    color: #a89577;
+    font-weight: bold;
+    font-family: 'Raleway', Arial, sans-serif; /* Apply Raleway font */
+}
+
+.contact-section input, 
+.contact-section textarea {
+    background-color: #444;
+    color: #fff;
+    border: 1px solid #555;
+    border-radius: 4px;
+    padding: 12px;
+    width: 100%;
+}
+
+.contact-section textarea {
+    resize: vertical;
+}
+
+.contact-section button {
+    background-color: #a89577;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-family: 'Raleway', Arial, sans-serif; /* Apply Raleway font */
+}
+
+.contact-section button:hover {
+    background-color: #8c7d5a;
+}
+
+footer {
+    color: #fff;
+    padding: 20px 0;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer p {
+    margin: 0;
+    padding-right: 20px;
+    font-family: 'Raleway', Arial, sans-serif; /* Apply Raleway font */
+}
+
+footer .social-icons {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+footer .social-icons li {
+    margin-right: 15px;
+}
+
+footer .social-icons a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: 'Raleway', Arial, sans-serif; /* Apply Raleway font */
+}
+
+footer .social-icons a:hover {
+    color: #a89577;
+}
+
+
+
+
+
+
+.social-icons {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    z-index: 1000; /* Ensure the icons stay on top of other elements */
+}
+
+.social-icons a {
+    display: inline-block;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s;
+}
+
+.social-icons img:hover {
+    transform: scale(1.1);
+}
+
+
