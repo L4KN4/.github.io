@@ -4,9 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spitz Wohnsitz Neugestaltung</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .slideshow-container {
+            position: relative;
+            width: 100%;
+            height: auto;
+        }
+        .mySlides {
+            display: none;
+            width: 100%;
+            height: auto;
+            margin: 0;
+            opacity: 0;
+            transition: opacity 1s;
+        }
+        .active {
+            display: block;
+            opacity: 1;
+        }
+    </style>
 </head>
 <body>
 
@@ -56,9 +77,17 @@
         <div class="border1" style="margin: 0; padding: 0;">
             <div class="">
                 <div class="row" style="margin: 0;">
-                    <div class="col-md-6 text-left" style="border-right: 2px solid #a89577; padding: 0;">
+
+                    <body>
+                        <div class="col-md-6 text-left slideshow-container" style="border-right: 2px solid #a89577; padding: 0;">
+                            <img src="assets/img/unsere_dienste.jpg" alt="Worker 2" class="mySlides img-fluid">
+                            <img src="assets/img/unsere_dienste_1.jpg" alt="Worker 3" class="mySlides img-fluid">
+                            <img src="assets/img/unsere_dienste_2.jpg" alt="Worker" class="mySlides img-fluid active">
+                            <img src="assets/img/unsere_dienste_3xxx.jpg" alt="Worker" class="mySlides img-fluid active">
+                        </div>
+                    <!-- <div class="col-md-6 text-left" style="border-right: 2px solid #a89577; padding: 0;">
                         <img src="https://i.pinimg.com/564x/96/58/2c/96582c80f3d4c91449726a9be8f347c9.jpg" alt="Worker" class="img-fluid" style="width: 100%; height: auto; margin: 0;">
-                    </div>
+                    </div> -->
                     <div class="col-md-6 mt-5" >
                         <h3 style="font-size: 50px;" >Unsere Dienste</h3>
                         <ul class="custom-list" >
@@ -76,7 +105,7 @@
 
         <!-- Icons Section -->
         <div class="border1-top" style="margin: 0; padding: 0;"> 
-            <div class="container1" style="border: 1px solid black; width: 100%; display: flex; flex-wrap: nowrap; margin: 0; padding: 0;">
+            <div class="container1" style="border: 1px solid #a89577; width: 100%; display: flex; flex-wrap: nowrap; margin: 0; padding: 0;">
                 <div class="box" style="margin: 0; padding: 0;">
                     <svg class="home1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0,0,300,150">
                         <g fill="#a89577" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(5.12,5.12)"><path d="M24.96289,1.05469c-0.20987,0.00724 -0.41214,0.08036 -0.57812,0.20898l-23,17.94727c-0.43579,0.33978 -0.51361,0.96851 -0.17383,1.4043c0.33978,0.43579 0.96851,0.51361 1.4043,0.17383l1.38477,-1.08008v26.29102c0.00006,0.55226 0.44774,0.99994 1,1h13.83203c0.10799,0.01785 0.21818,0.01785 0.32617,0h11.67383c0.10799,0.01785 0.21818,0.01785 0.32617,0h13.8418c0.55226,-0.00006 0.99994,-0.44774 1,-1v-26.29102l1.38477,1.08008c0.2819,0.21983 0.65967,0.27257 0.991,0.13833c0.33133,-0.13423 0.56586,-0.43504 0.61526,-0.7891c0.0494,-0.35406 -0.09386,-0.70757 -0.37579,-0.92736l-7.61523,-5.94141v-7.26953h-6v2.58594l-9.38477,-7.32227c-0.18607,-0.14428 -0.41707,-0.21828 -0.65234,-0.20898zM25,3.32227l19,14.82617v26.85156h-12v-19h-14v19h-12v-26.85156zM37,8h2v3.70898l-2,-1.5625zM20,28h10v17h-10z"></path></g></g>
@@ -110,9 +139,24 @@
                     <p>Ich bin ein Textabschnitt. Klicke hier und bearbeite mich. Klicke einfach auf „Text bearbeiten“ oder doppelklicke, um Inhalt hinzuzufügen und die Schriftart zu ändern.</p>
                     <p>Es ist der ideale Ort, um Besuchern etwas mehr über dich zu erzählen.</p>
                 </div>
-                <div class="col-md-6" style="padding: 0;">
+
+
+
+                <div id="carouselExampleSlidesOnly" class="carousel slide col-md-6" style="padding: 0;" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="assets/img/ueber_uns.jpg" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="assets/img/ueber_uns_1.jpg" class="d-block w-100" alt="...">
+                      </div>
+
+                    </div>
+                  </div>
+
+                <!-- <div class="col-md-6" style="padding: 0;">
                     <img src="https://media.istockphoto.com/id/942692330/photo/carpenter-working-with-electric-planer-on-wooden-plank-in-workshop-craftsman-makes-own.jpg?s=612x612&w=0&k=20&c=akgceDFWxOIrHdtkIU00blW3_ZPS7uwtC7xvPg5rb8M=" alt="About Us" class="img-fluid" style="width: 100%; height: 100%; object-fit: fill;">
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
@@ -250,6 +294,36 @@ function changeImage() {
 
 setInterval(changeImage, 8000); // Change image every 4 seconds
 
+</script>
+
+
+<script>
+    let currentImageIndex1 = 0;
+    const images1 = document.querySelectorAll('.mySlides');
+    const totalImages1 = images1.length;
+
+    function changeImage() {
+        images1[currentImageIndex1].classList.remove('active');
+        currentImageIndex1 = (currentImageIndex1 + 1) % totalImages1;
+        images1[currentImageIndex1].classList.add('active');
+    }
+
+    setInterval(changeImage, 5000); // Change image every 5 seconds
+</script>
+
+
+<script>
+    let currentImageIndex2 = 0;
+    const images2 = document.querySelectorAll('.mySlides');
+    const totalImages2 = images2.length;
+
+    function changeImage() {
+        images2[currentImageIndex2].classList.remove('active');
+        currentImageIndex2 = (currentImageIndex2 + 1) % totalImages2;
+        images2[currentImageIndex2].classList.add('active');
+    }
+
+    setInterval(changeImage, 5000); // Change image every 5 seconds
 </script>
 
 </body>
