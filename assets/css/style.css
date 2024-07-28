@@ -3,7 +3,9 @@
 /* General styles */
 body {
     font-family: 'Raleway', Arial, sans-serif; /* Apply Raleway font */
-    background: url(https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?fm=jpg&w=3000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8aW50ZXJpb3IlMjBkZXNpZ258ZW58MHx8MHx8fDA%3D) no-repeat center center/cover; 
+    /* background: url(https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?fm=jpg&w=3000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8aW50ZXJpb3IlMjBkZXNpZ258ZW58MHx8MHx8fDA%3D) no-repeat center center/cover;  */
+    background-color: #333;
+    
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
