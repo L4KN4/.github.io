@@ -8,33 +8,251 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
     <style>
-        body{
-            background-color: #333;
-
-        }
-        html {
+        body {
+    background-color: #333;
+}
+#project{
+    padding-top: 5%;
+}
+#gjate{
+    
+        flex: 0 0 50%;
+        max-width: 25%;
+        height: 350px;
+        padding: 5px;
+        border: 2px solid #a89577;
+    }
+#gjate1{
+    color: white;
+    padding-top: 30%;
+    padding-left: 25%;
+}
+html {
     scroll-behavior: smooth;
     background-color: #333;
 }
-        .slideshow-container {
-            position: relative;
-            width: 100%;
-            height: auto;
-        }
-        .mySlides {
-            display: none;
-            width: 100%;
-            height: auto;
-            margin: 0;
-            opacity: 0;
-            transition: opacity 1s;
-        }
-        .active {
-            display: block;
-            opacity: 1;
-        }
-    </style>
+
+.slideshow-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.mySlides {
+    display: none;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.active {
+    display: block;
+    opacity: 1;
+}
+
+/* Styles for Mobile Devices */
+@media (max-width: 768px) {
+    /* Adjust gallery section padding */
+    .services-section {
+        padding-top: 2%;
+    }
+
+    /* Adjust the layout of the gallery items */
+    .d-flex {
+        flex-direction: column;
+    }
+
+    .d-flex .p-1 {
+        flex: 0 0 100%;
+        max-width: 100%;
+        height: auto;
+        padding: 0;
+    }
+
+    /* Ensure images fit well in their containers */
+    .d-flex img {
+        width: 100%;
+        height: auto;
+        max-height: none; /* Remove any maximum height constraint */
+        object-fit: cover;
+    }
+
+    /* Adjust text and headings within gallery items */
+    .d-flex h1, .d-flex h3, .d-flex h5 {
+        font-size: 1.2rem; /* Adjust font size as needed */
+        padding: 10px; /* Add padding for spacing */
+    }
+
+    .d-flex p {
+        font-size: 1rem; /* Adjust font size as needed */
+        padding: 10px; /* Add padding for spacing */
+    }
+    #gjate{
+         max-width: 100%;
+        height: 350px;
+        padding: 5px;
+        border: 2px solid #a89577;
+        background-color:#333; 
+        color: white;
+
+        
+    }
+    #gjate1{
+    color: white;
+    padding-top: 0%;
+    padding-left: 0%;
+}
+#project{
+    padding-top: 30%;
+}
+.social-icons{
+    text-align: left;
+}
+}
+
+/* Styles for Mobile Devices */
+@media (max-width: 768px) {
+    /* Adjust gallery section padding */
+    .services-section {
+        padding-top: 2%;
+    }
+
+    /* Adjust the layout of gallery items for tablets and smaller screens */
+    .d-flex {
+        flex-direction: column;
+    }
+
+    .d-flex .p-1 {
+        flex: 0 0 100%;
+        max-width: 100%;
+        height: auto;
+        padding: 5px;
+        border: none; /* Remove border for a cleaner look */
+    }
+
+    /* Ensure images fit well in their containers */
+    .d-flex img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    /* Adjust text and headings within gallery items */
+    .d-flex h1, .d-flex h3, .d-flex h5 {
+        font-size: 1.2rem; /* Adjust font size as needed */
+        padding: 5px;
+        text-align: center; /* Center text for better alignment */
+    }
+
+    .d-flex p {
+        font-size: 1rem; /* Adjust font size as needed */
+        padding: 5px;
+        text-align: center; /* Center text for better alignment */
+    }
+    #gjate{
+         max-width: 100%;
+        height: 350px;
+        padding: 5px;
+        border: 2px solid #a89577;
+        background-color:#333; 
+        color: white;
+
+    }
+    #gjate1{
+    color: white;
+    padding-top: 0%;
+    padding-left: 0%;
+}
+#project{
+    padding-top: 30%;
+}
+.social-icons{
+    text-align: left;
+}
+}
+
+@media (max-width: 576px) {
+    /* Further adjust gallery section padding for smaller screens */
+    .services-section {
+        padding-top: 1%;
+        width: 100%;
+
+    }
+
+    /* Adjust layout of gallery items for very small screens */
+    .d-flex {
+        
+        width: 100%;
+    }
+
+    .d-flex .p-1 {
+        flex: 0 0 100%;
+        max-width: 100%;
+        height: auto;
+        padding: 5px;
+        border: none; /* Remove border for a cleaner look */
+        
+    }
+
+    /* Ensure images fit well in very small screens */
+    .d-flex img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    /* Adjust text and headings within gallery items for very small screens */
+    .d-flex h1, .d-flex h3, .d-flex h5 {
+        font-size: 1rem; /* Adjust font size as needed */
+        padding: 5px;
+        text-align: center; /* Center text for better alignment */
+    }
+
+    .d-flex p {
+        font-size: 0.9rem; /* Adjust font size as needed */
+        padding: 5px;
+        text-align: center; /* Center text for better alignment */
+    }
+    .services-section {
+        width: 100%;
+    }
+    #gjate{
+         max-width: 100%;
+        height: 350px;
+        padding: 5px;
+        border: 2px solid #a89577;
+        background-color:#333; 
+        color: white;
+    }
+    #gjate1{
+    color: white;
+    padding-top: 0%;
+    padding-left: 0%;
+}
+.navbar {
+    background-color: transparent; 
+}
+
+/* Mobile-specific styles */
+@media (max-width: 767.98px) { 
+    .navbar {
+        background-color: #333;
+    }
+}
+#project{
+    padding-top: 30%;
+}
+.social-icons{
+    text-align: left;
+}
+}
+
+</style>
+
 </head>
 <body>
 
@@ -57,7 +275,10 @@
                     <a class="nav-link" href="cs.html">PROJEKTE</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link btn " href="#kontakt">KONTAKT</a>
+                    <a class="nav-link" href="impressum.html">IMPRESSUM</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link btn " href="index.html#kontakt">KONTAKT</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link btn btn-outline-light" style="border: 1px solid white;" href="#">ANRUFEN</a>
@@ -71,45 +292,45 @@
 
 
 <!-- Gallery Section -->
-<section id="project" class="services-section " style="margin: 2; padding-top: 5%;">
+<section id="project" class="services-section " >
     <div class="mx-5" style="padding: 0;">
         <div class=" no-gutters" style="margin: 0; padding: 0;">
             <!-- Left Side: 4 Small Pictures -->
             <div class=" d-flex flex-wrap" style="padding: 0; ">
-                <div class="p-1" style="flex: 0 0 50%; max-width: 25%; height: 350px; padding: 5px; border: 2px solid #a89577; background-color:  #a89577; ">
-                    <h1   style="color: white; padding-top: 30%;  padding-left: 25%;" >Unsere <br> Dienste</h1>
+                <div class="p-1" id="gjate" >
+                    <h1 id="gjate1" >Unsere <br> Dienste</h1>
                 </div>
-                <div class="p-1" style="flex: 0 0 50%; max-width: 25%; height: 350px; padding: 5px; border: 2px solid #a89577;">
+                <div class="p-1" id="gjate">
 
                     <h3   style="color: #a89577;  padding-top: 15%;  padding-right: 2%;" > <span style="padding-right: 17%;" >Komplette</span> <br> Remodellierung</h3>
 
                         <p  style="color: white; width: 75%;  padding-left: 25%;" >Ich bin ein Textabschnitt. Klicke hier, um Text hinzuzufügen und bearbeite mich. An dieser Stelle kannst du Besuchern etwas mehr über dich erzählen.</p>
                 </div>
-                <div class="p-1" style="flex: 0 0 50%; max-width: 25%; height: 350px; padding: 5px; border: 2px solid #a89577;">
+                <div class="p-1" id="gjate">
 
                     <h3   style="color: #a89577;  padding-top: 15%;  padding-right: 10%;" > <span style="padding-right: 23%;" >Küchen</span> <br> Umgestaltung</h3>
                     <p  style="color: white; width: 75%;  padding-left: 25%;" >Ich bin ein Textabschnitt. Klicke hier, um Text hinzuzufügen und bearbeite mich. An dieser Stelle kannst du Besuchern etwas mehr über dich erzählen.</p>
             </div>
-                <div class="p-1" style="flex: 0 0 50%; max-width: 25%; height: 350px; padding: 5px; border: 2px solid #a89577;">
+                <div class="p-1" id="gjate">
                     <img src="assets/img/unsere_dienste.jpg" alt="Image 4" class="img-fluid" style="width: 100%; height: 100%; max-height: 100%; object-fit: cover;">
                 </div>
             </div>
             <!-- Right Side: 1 Large Picture -->
             <div class=" d-flex flex-wrap" style="padding: 0;">
-                <div class="p-1" style="flex: 0 0 50%; max-width: 25%; height: 350px; padding: 5px; border: 2px solid #a89577;">
+                <div class="p-1" id="gjate">
                     <img src="assets/img/unsere_dienste_1.jpg" alt="Image 4" class="img-fluid" style="width: 100%; height: 100%; max-height: 100%; object-fit: cover;">
                 </div>
-                <div class="p-1" style="flex: 0 0 50%; max-width: 25%; height: 350px; padding: 5px; border: 2px solid #a89577;">
+                <div class="p-1" id="gjate">
 
                     <h3   style="color: #a89577; padding-top: 15%;  padding-right: 10%;" >Innenbereiche </h3>
                     <p  style="color: white; width: 70%;  padding-left: 25%;" >Ich bin ein Textabschnitt. Klicke hier, um Text hinzuzufügen und bearbeite mich. An dieser Stelle kannst du Besuchern etwas mehr über dich erzählen.</p>
             </div>
-            <div class="p-1" style="flex: 0 0 50%; max-width: 25%; height: 350px; padding: 5px; border: 2px solid #a89577;">
+            <div class="p-1" id="gjate">
 
                 <h3   style="color: #a89577; padding-top: 15%;  padding-right: 10%;" >Bodenbeläge</h3>
                 <p  style="color: white; width: 70%;  padding-left: 25%;" >Ich bin ein Textabschnitt. Klicke hier, um Text hinzuzufügen und bearbeite mich. An dieser Stelle kannst du Besuchern etwas mehr über dich erzählen.</p>
         </div>
-        <div class="p-1" style="flex: 0 0 50%; max-width: 25%; height: 350px; padding: 5px; border: 2px solid #a89577;">
+        <div class="p-1" id="gjate">
 
             <h3   style="color: #a89577;  padding-top: 15%;  padding-right: 23%;" > <span style="padding-left: 10%;" >Badezimmer</span> <br> Sanierung</h3>
 
@@ -117,10 +338,10 @@
         </div>
             </div>
             <div class=" d-flex flex-wrap" style="padding: 0; ">
-                <div class="p-1" style="flex: 0 0 50%; max-width: 25%; height: 350px; padding: 5px; border: 2px solid #a89577;">
+                <div class="p-1" id="gjate">
                     <img src="assets/img/unsere_dienste_2.jpg" alt="Image 4" class="img-fluid" style="width: 100%; height: 100%; max-height: 100%; object-fit: cover;">
                 </div>
-                <div class="p-1" style="flex: 0 0 50%; max-width: 25%; height: 350px; padding: 5px; border: 2px solid #a89577;">
+                <div class="p-1" id="gjate">
                     <h5 style="color: white; padding-top: 18%; padding-left: 30%;">Vorkonstruktion</h5>
                     <p style="color: white; width: 70%; padding-left: 25%;">
                         <ul style="margin-left: 0; padding-left: 20px; list-style-position: inside;">
@@ -131,7 +352,7 @@
                     </p>
                 </div>
                 
-                <div class="p-1" style="flex: 0 0 50%; max-width: 25%; height: 350px; padding: 5px; border: 2px solid #a89577;">
+                <div class="p-1" id="gjate">
                     <h5 style="color: white; padding-top: 18%; padding-left: 30%;">Konstruktion</h5>
                     <p style="color: white; width: 70%; padding-left: 25%;">
                         <ul style="margin-left: 0; padding-left: 20px; list-style-position: inside;">
@@ -142,8 +363,8 @@
                     </p>
                 </div>
 
-                <div class="p-1" style="flex: 0 0 50%; max-width: 25%; height: 350px; padding: 5px; border: 2px solid #a89577;">
-                    <img src="assets/img/unsere_dienste.jpg" alt="Image 4" class="img-fluid" style="width: 100%; height: 100%; max-height: 100%; object-fit: cover;">
+                <div class="p-1" id="gjate">
+                    <img src="assets/img/unsere_dienste_3xxx.jpg" alt="Image 4" class="img-fluid" style="width: 100%; height: 100%; max-height: 100%; object-fit: cover;">
                 </div>
             </div>
         </div>
@@ -157,9 +378,9 @@
             <!-- Contact Information Column -->
             <div class="col-md-4 contact-info">
                 <h2>Kontakt</h2>
-                <p><strong>Adresse:</strong> Musterstraße 123, 12345 Musterstadt</p>
-                <p><strong>Telefon:</strong> +49 123 456789</p>
-                <p><strong>Email:</strong> info@spitz-wohn.de</p>
+                <p><strong>Adresse:</strong> Gaußstraße 11 85757 Karlsfeld, Germany</p>
+                <p><strong>Telefon:</strong> 089-215288888</p>
+                <p><strong>Email:</strong> info@unicabau.de</p>
             </div>
             <!-- Contact Form Column -->
             <div class="col-md-8">
@@ -255,6 +476,7 @@ setInterval(changeImage, 8000); // Change image every 4 seconds
     }
 
     setInterval(changeImage, 5000); // Change image every 5 seconds
+    
 </script>
 
 </body>

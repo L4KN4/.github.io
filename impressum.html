@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        body {
+            background-color: #333;
+        }
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        footer ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        footer ul li {
+            margin-bottom: 0.5rem;
+        }
+        #titulli{
+        font-size: 100px;
+        }
+
+@media (max-width: 767px) {
+    /* Navbar adjustments */
+    .navbar-brand {
+        font-size: 1.25rem; /* Smaller font size for mobile */
+    }
+
+    .navbar-toggler {
+        border: 1px solid white; /* Border color for toggler */
+    }
+
+    .navbar-nav {
+        text-align: center; /* Center-align nav links */
+        margin-top: 1rem; /* Space above navbar items */
+    }
+
+    .navbar-nav .nav-link {
+        padding: 0.75rem 0.5rem; /* Adjust padding for mobile view */
+        display: block; /* Make each link block-level for easier clicking */
+    }
+
+    .navbar-nav .btn {
+        margin-top: 1rem; /* Space above the button */
+    }
+
+    /* Section adjustments */
+    section {
+        padding: 1rem; /* Add padding around the section */
+        margin-top: 90px; /* Adjust top margin for fixed navbar */
+    }
+
+    .ps-5 {
+        padding-left: 1rem; /* Reduce padding for smaller screens */
+        padding-right: 1rem; /* Add padding-right for consistency */
+    }
+
+
+    .text-white h5 {
+        font-size: 1.25rem; /* Adjust font size for sub-headings */
+    }
+
+    /* Footer adjustments */
+    .footer .col-md-3 {
+        margin-bottom: 1.5rem; /* Space between footer columns */
+    }
+
+    .footer h4 {
+        font-size: 1.25rem; /* Adjust heading size in footer */
+    }
+
+    .footer p {
+        font-size: 0.875rem; /* Smaller font size for better readability */
+    }
+
+    .footer ul {
+        padding-left: 0; /* Remove padding for footer lists */
+    }
+
+    .footer ul li {
+        margin-bottom: 0.75rem; /* Increase space between list items */
+    }
+}
+
+/* Adjustments for tablets and larger screens */
+@media (min-width: 768px) and (max-width: 991px) {
+    .navbar-brand {
+        font-size: 1.5rem; /* Adjust font size for medium screens */
+    }
+
+    .text-white h5 {
+        font-size: 1.5rem; /* Adjust font size for sub-headings */
+    }
+
+    .footer .col-md-3 {
+        margin-bottom: 1rem; /* Space between footer columns */
+    }
+
+}
+/* Mobile view adjustments */
+@media (max-width: 767px) {
+    /* Navbar adjustments */
+    .navbar {
+        background-color: #333; /* Background color for mobile view */
+    }
+
+    .navbar-brand {
+        font-size: 1.25rem; /* Smaller font size for mobile */
+    }
+
+    .navbar-toggler {
+        border: 1px solid white; /* Border color for toggler */
+    }
+
+    .navbar-nav {
+        text-align: center; /* Center-align nav links */
+        margin-top: 1rem; /* Space above navbar items */
+    }
+
+    .navbar-nav .nav-link {
+        padding: 0.75rem 0.5rem; /* Adjust padding for mobile view */
+        display: block; /* Make each link block-level for easier clicking */
+    }
+
+    .navbar-nav .btn {
+        margin-top: 1rem; /* Space above the button */
+    }
+
+    /* Section adjustments */
+    section {
+        padding: 1rem; /* Add padding around the section */
+        margin-top: 90px; /* Adjust top margin for fixed navbar */
+    }
+
+    .ps-5 {
+        padding-left: 1rem; /* Reduce padding for smaller screens */
+        padding-right: 1rem; /* Add padding-right for consistency */
+    }
+
+    .text-white h5 {
+        font-size: 1.25rem; /* Adjust font size for sub-headings */
+    }
+
+    /* Footer adjustments */
+    .footer .col-md-3 {
+        margin-bottom: 1.5rem; /* Space between footer columns */
+    }
+
+    .footer h4 {
+        font-size: 1.25rem; /* Adjust heading size in footer */
+    }
+
+    .footer p {
+        font-size: 0.875rem; /* Smaller font size for better readability */
+    }
+
+    .footer ul {
+        padding-left: 0; /* Remove padding for footer lists */
+    }
+
+    .footer ul li {
+        margin-bottom: 0.75rem; /* Increase space between list items */
+    }
+
+    #titulli {
+        font-size: 2.5rem; /* Adjust font size for smaller screens */
+    }
+}
+
+
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top"> 
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Unica BAU GmbH</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">START</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="project.html">DIENSTE</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cs.html">PROJEKTE</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="impressum.html">IMPRESSUM</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#kontakt">KONTAKT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-outline-light" style="border: 1px solid white; color: rgb(198, 194, 194);" href="#">ANRUFEN</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <section style="background-color: #3f3f3f; margin-top: 80px; width: 100%;">
+        <div class="ps-5 text-white pt-3">
+            <h1  id="titulli">Impressum</h1>
+            <h5>Anbieterkennung nach § 5 Telemediengesetz (TMG)</h5>
+        </div>
+        <br><br>
+        <div class="ps-5 text-white">
+            <p>Vilson Trocknung GmbH<br>Hauptniederlassung<br>Gaußstraße 11<br>85757 Karlsfeld</p>
+            <br>
+            <p>Tel. +49 89 / 215 288 888<br>Fax. +49 89 / 215 288 880</p>
+            <br>
+            <p>E-Mail: info@vilson-trocknung.de</p>
+            <br>
+            <p>Geschäftsführer: Vilson Behramaj<br>Umsatzsteuer-ID: DE815807514<br>Registergericht: Amtsgericht München<br>Registriernummer: HRB 246594</p>
+            <br>
+            <p><strong>Design & Technische Realisation:</strong><br>muenchnermedien.de – Internetagentur in München</p>
+            <br>
+            <p><strong>Streitschlichtung</strong><br>Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: <a href="https://ec.europa.eu/consumers/odr" target="_blank" style="color: white;">https://ec.europa.eu/consumers/odr</a>. Unsere E-Mail-Adresse finden Sie oben im Impressum. Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
+            <br>
+            <p><strong>Haftung für Inhalte</strong><br>Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen. Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.</p>
+            <br>
+            <p><strong>Haftung für Links</strong><br>Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar. Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen.</p>
+            <br>
+            <p><strong>Urheberrecht</strong><br>Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet. Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.</p>
+            <br>
+            <p><strong>Bildquellennachweis</strong><br>Auf unserer Webseite verwenden wir sowohl eigenes als auch fremdes Bildmaterial.</p>
+        </div>
+    </section>
+    
+    
+    <footer class="bg-dark text-white pt-4 pb-4">
+        <div class="px-5">
+            <div class="row">
+                <div class="col-md-3">
+                    <h4><i class="fas fa-info-circle"></i> Über Uns</h4>
+                    <p>Spitz Wohnsitz Neugestaltung
+    
+                        Ich bin ein Textabschnitt. Klicke hier und bearbeite mich. Klicke einfach auf „Text bearbeiten“ oder doppelklicke, um Inhalt hinzuzufügen und die Schriftart zu ändern.
+                        
+                        Es ist der ideale Ort, um Besuchern etwas mehr über dich zu erzählen</p>
+                    <p>Unseren Kunden stehen wir seit dem Jahre 2013 rund um die Uhr mit Rat und Tat zur Seite.</p>
+                </div>
+                <div class="col-md-3">
+                    <h4><i class="fas fa-envelope"></i> Kontakt</h4>
+                    <p><strong>VILSON Trocknung GmbH</strong><br>
+                    Gollierstraße 70<br>
+                    80339 München</p>
+                    <p>
+                        E-Mail: <a href="mailto:info@vilson-trocknung.de" class="text-white"><i class="fas fa-envelope"></i> info@vilson-trocknung.de</a><br><br>
+                        Tel.: <i class="fas fa-phone"></i> +49 89 / 215 288 888<br><br>
+                        Fax: <i class="fas fa-fax"></i> +49 89 / 215 288 880
+                    </p>
+                </div>
+                <div class="col-md-3">
+                    <h4><i class="fas fa-clock"></i> Öffnungszeiten</h4>
+                    <p>Für unsere Kunden bieten wir einen 24 Stunden Service. Bürosprechzeiten sind:</p>
+                    <ul>
+                        <li><i class="fas fa-calendar-day"></i> Montag-Freitag: 08:00 bis 16:00 Uhr</li>
+                        <li><i class="fas fa-calendar-week"></i> Samstags: 08:00 bis 12:00 Uhr</li>
+                        <li><i class="fas fa-calendar-alt"></i> Sonntags: nur Kundenservice</li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h4><i class="fas fa-newspaper"></i> Aktuelles</h4>
+                    <ul>
+                        <li><i class="fas fa-calendar-day"></i> Kleiner Wasserfleck, großer Schaden? 14. April 2018</li>
+                        <li><i class="fas fa-calendar-day"></i> Woher kommt die Feuchtigkeit in den Wänden? 7. Februar 2018</li>
+                        <li><i class="fas fa-calendar-day"></i> Schimmel mindert den Verkaufswert von Immobilien 12. August 2017</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+</footer>
+        <div class="px-5 text-white ">
+            <div class="row pt-2">
+                <div class="col-md-6">
+                    <p>&copy; 2024 Unica BAU GmbH. Alle Rechte vorbehalten. | Unica Bau GmbH - Design & Entwicklung - <a class="text-white" href="#">www.futureL<sup>2</sup>J.com</a> </p>
+
+                </div>
+   
+                <div class="col-md-1">
+
+                </div>
+                <div class="col-md-1">
+                    <span><a class="nav-link" href="index.html">START</a></span>
+
+                </div>
+                <div class="col-md-1">
+
+                    <span><a class="nav-link" href="project.html">DIENSTE</a></span>
+
+                </div>
+                <div class="col-md-1">
+
+                    <span><a class="nav-link" href="cs.html">PROJEKTE</a></span>
+                </div>
+
+                <div class="col-md-1">
+                        <span><a class="nav-link" href="impressum.html">IMPRESSUM</a></span>
+
+                </div>
+                <div class="col-md-1">
+
+                        <span><a class="nav-link" href="index.html#kontakt">KONTAKT</a></span>
+
+                </div>
+
+
+            </div>
+        </div>
+    
+    
+    
+</body>
+</html>
